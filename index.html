@@ -32,7 +32,6 @@
         .interlinear {
             margin-bottom: 1em; /* Space between paragraphs */
             text-align: justify; 
-            /* text-indent has been removed to prevent the imbalance */
             /* Horizontal padding added to create a balanced frame */
             padding: 0 2em;
         }
@@ -46,7 +45,7 @@
             padding: 0.2em;
         }
 
-        /* NEW RULE: Indent only the first word-group of a paragraph */
+        /* Indent only the first word-group of a paragraph */
         .interlinear .word-group:first-child {
             margin-left: 2em;
         }
@@ -66,6 +65,33 @@
             color: #666; /* Grey color to make it less prominent */
             font-style: italic;
             font-weight: 400; /* Set to normal to match the original text's weight */
+        }
+
+        /* --- MOBILE RESPONSIVE STYLES --- */
+        @media (max-width: 768px) {
+            h1 {
+                /* Use Flexbox for better control on mobile */
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                /* Reduce padding on smaller screens */
+                padding: 0 1em 0.5em;
+            }
+
+            .interlinear {
+                /* Reduce padding on smaller screens for more text space */
+                padding: 0 1em;
+            }
+
+            h1 .word-group {
+                /* Adjust margin for flex items */
+                margin-bottom: 1em;
+            }
+            
+            .interlinear .word-group:first-child {
+                /* Adjust first-word indent for smaller screens */
+                margin-left: 1em;
+            }
         }
     </style>
 </head>
