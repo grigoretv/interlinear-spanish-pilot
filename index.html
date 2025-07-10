@@ -14,7 +14,6 @@
         body {
             font-family: 'EB Garamond', serif; /* Use the imported Garamond font */
             line-height: 1.5;
-            /* padding has been removed from the body to fix the indentation imbalance */
             max-width: 800px;
             margin: auto;
             color: #333;
@@ -33,7 +32,7 @@
         .interlinear {
             margin-bottom: 1em; /* Space between paragraphs */
             text-align: justify; 
-            text-indent: 2em; /* Indent the first line of the paragraph */
+            /* text-indent has been removed to prevent the imbalance */
             /* Horizontal padding added to create a balanced frame */
             padding: 0 2em;
         }
@@ -45,6 +44,11 @@
             margin: 0 0.2em 1.5em;  /* right-margin, bottom-margin */
             text-align: center;
             padding: 0.2em;
+        }
+
+        /* NEW RULE: Indent only the first word-group of a paragraph */
+        .interlinear .word-group:first-child {
+            margin-left: 2em;
         }
 
         /* The original source language text (Spanish) */
