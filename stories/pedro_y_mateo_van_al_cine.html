@@ -1,583 +1,583 @@
-!DOCTYPE html
-html lang=es
-head
-    meta charset=UTF-8
-    meta name=viewport content=width=device-width, initial-scale=1.0
-    titleInterlinear Pedro y Mateo van al cinetitle
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interlinear: Pedro y Mateo van al cine</title>
 
-    !-- Google Font Import for EB Garamond --
-    link rel=preconnect href=httpsfonts.googleapis.com
-    link rel=preconnect href=httpsfonts.gstatic.com crossorigin
-    link href=httpsfonts.googleapis.comcss2family=EB+Garamondital,wght@0,400;0,700;1,400;1,700&display=swap rel=stylesheet
+    <!-- Google Font Import for EB Garamond -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-    style
-         General body styling 
+    <style>
+        /* General body styling */
         body {
-            font-family 'EB Garamond', serif;  Use the imported Garamond font 
-            line-height 1.5;
-            max-width 800px;
-            margin auto;
-            color #333;
+            font-family: 'EB Garamond', serif; /* Use the imported Garamond font */
+            line-height: 1.5;
+            max-width: 800px;
+            margin: auto;
+            color: #333;
         }
         
-         Styling for the main title 
+        /* Styling for the main title */
         h1 {
-            text-align center;
-            padding 0 2em 0.5em;
-            font-weight 700;  Use the bold weight of the font 
-            margin-bottom 1em;  Adjusted margin 
+            text-align: center;
+            padding: 0 2em 0.5em;
+            font-weight: 700; /* Use the bold weight of the font */
+            margin-bottom: 1em; /* Adjusted margin */
         }
         
-         Horizontal rule for visual separation 
+        /* Horizontal rule for visual separation */
         hr {
-            border 0;
-            height 1px;
-            background-color #ccc;
-            margin 0 2em 2em;  Top, Horizontal, Bottom margin 
+            border: 0;
+            height: 1px;
+            background-color: #ccc;
+            margin: 0 2em 2em; /* Top, Horizontal, Bottom margin */
         }
 
-         This is the main container for a paragraph of interlinear text. 
+        /* This is the main container for a paragraph of interlinear text. */
         .interlinear {
-            margin-bottom 2em;  Increased space between paragraphs 
-            text-align justify; 
-            padding 0 2em;
+            margin-bottom: 2em; /* Increased space between paragraphs */
+            text-align: justify; 
+            padding: 0 2em;
         }
 
-         This is the container for EACH individual word and its translation. 
+        /* This is the container for EACH individual word and its translation. */
         .word-group {
-            display inline-block;
-            vertical-align bottom;  Aligns the bottom of the groups 
-            margin 0 0.2em 1.5em;   right-margin, bottom-margin 
-            text-align center;
-            padding 0.2em;
+            display: inline-block;
+            vertical-align: bottom; /* Aligns the bottom of the groups */
+            margin: 0 0.2em 1.5em;  /* right-margin, bottom-margin */
+            text-align: center;
+            padding: 0.2em;
         }
 
-         Indent only the first word-group of a paragraph 
-        .interlinear .word-groupfirst-child {
-            margin-left 2em;
+        /* Indent only the first word-group of a paragraph */
+        .interlinear .word-group:first-child {
+            margin-left: 2em;
         }
 
-         The original source language text (Spanish) 
+        /* The original source language text (Spanish) */
         .original {
-            display block;   Ensures it takes its own line inside the group 
-            font-size 1.3em;
-            font-weight 400;  Set to normal as requested 
-            color #000;
+            display: block;  /* Ensures it takes its own line inside the group */
+            font-size: 1.3em;
+            font-weight: 400; /* Set to normal as requested */
+            color: #000;
         }
         
-         Specific font size for the main text 
+        /* Specific font size for the main text */
         .interlinear .original {
-            font-size 1.35em;
+            font-size: 1.35em;
         }
         
-         Specific font size for the title text 
+        /* Specific font size for the title text */
         h1 .original {
-            font-size 1.5em;
+            font-size: 1.5em;
         }
 
-         The translated gloss (English) 
+        /* The translated gloss (English) */
         .translation {
-            display block;   Ensures it takes its own line inside the group 
-            font-size 0.9em;
-            color #666;  Grey color to make it less prominent 
-            font-style italic;
-            font-weight 400;  Set to normal to match the original text's weight 
+            display: block;  /* Ensures it takes its own line inside the group */
+            font-size: 0.9em;
+            color: #666; /* Grey color to make it less prominent */
+            font-style: italic;
+            font-weight: 400; /* Set to normal to match the original text's weight */
         }
 
-         --- MOBILE RESPONSIVE STYLES --- 
-        @media (max-width 768px) {
+        /* --- MOBILE RESPONSIVE STYLES --- */
+        @media (max-width: 768px) {
             h1 {
-                display flex;
-                flex-wrap wrap;
-                justify-content center;
-                padding 0 1em 0.5em;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0 1em 0.5em;
             }
             
-             Reduce title font size on mobile 
+            /* Reduce title font size on mobile */
             h1 .original {
-                font-size 1.15em;
+                font-size: 1.15em;
             }
             
             hr {
-                margin 0 1em 2em;
+                margin: 0 1em 2em;
             }
 
             .interlinear {
-                padding 0 1em;
+                padding: 0 1em;
             }
 
             h1 .word-group {
-                margin-bottom 1em;
+                margin-bottom: 1em;
             }
             
-            .interlinear .word-groupfirst-child {
-                margin-left 1em;
+            .interlinear .word-group:first-child {
+                margin-left: 1em;
             }
         }
-    style
-head
-body
+    </style>
+</head>
+<body>
 
-    h1
-        span class=word-groupspan class=originalPedrospanspan class=translationPedrospanspan
-        span class=word-groupspan class=originalyspanspan class=translationandspanspan
-        span class=word-groupspan class=originalMateospanspan class=translationMateospanspan
-        span class=word-groupspan class=originalvanspanspan class=translationgospanspan
-        span class=word-groupspan class=originalalspanspan class=translationto thespanspan
-        span class=word-groupspan class=originalcinespanspan class=translationcinemaspanspan
-    h1
+    <h1>
+        <span class="word-group"><span class="original">Pedro</span><span class="translation">Pedro</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">Mateo</span><span class="translation">Mateo</span></span>
+        <span class="word-group"><span class="original">van</span><span class="translation">go</span></span>
+        <span class="word-group"><span class="original">al</span><span class="translation">to the</span></span>
+        <span class="word-group"><span class="original">cine</span><span class="translation">cinema</span></span>
+    </h1>
     
-    hr
+    <hr>
 
-    p class=interlinear
-        span class=word-groupspan class=originalCaíaspanspan class=translationWas fallingspanspan
-        span class=word-groupspan class=originallaspanspan class=translationthespanspan
-        span class=word-groupspan class=originalnochespanspan class=translationnightspanspan
-        span class=word-groupspan class=originalyspanspan class=translationandspanspan
-        span class=word-groupspan class=originallasspanspan class=translationthespanspan
-        span class=word-groupspan class=originallucesspanspan class=translationlightsspanspan
-        span class=word-groupspan class=originaldespanspan class=translationofspanspan
-        span class=word-groupspan class=originallaspanspan class=translationthespanspan
-        span class=word-groupspan class=originalciudadspanspan class=translationcityspanspan
-        span class=word-groupspan class=originalempezabanspanspan class=translationwere beginningspanspan
-        span class=word-groupspan class=originalaspanspan class=translationtospanspan
-        span class=word-groupspan class=originalencendersespanspan class=translationturn onspanspan
-        span class=word-groupspan class=originalmientrasspanspan class=translationwhilespanspan
-        span class=word-groupspan class=originalPedrospanspan class=translationPedrospanspan
-        span class=word-groupspan class=originalyspanspan class=translationandspanspan
-        span class=word-groupspan class=originalMateospanspan class=translationMateospanspan
-        span class=word-groupspan class=originalpaseabanspanspan class=translationwere strollingspanspan
-        span class=word-groupspan class=originalporspanspan class=translationalongspanspan
-        span class=word-groupspan class=originalsuspanspan class=translationtheirspanspan
-        span class=word-groupspan class=originalcallespanspan class=translationstreetspanspan
-        span class=word-groupspan class=originalde siempre.spanspan class=translationusual.spanspan
-        span class=word-groupspan class=originalDe repente,spanspan class=translationSuddenly,spanspan
-        span class=word-groupspan class=originalMateospanspan class=translationMateospanspan
-        span class=word-groupspan class=originalse paró en seco,spanspan class=translationstopped dead,spanspan
-        span class=word-groupspan class=originalconspanspan class=translationwithspanspan
-        span class=word-groupspan class=originallaspanspan class=translationhisspanspan
-        span class=word-groupspan class=originalmiradaspanspan class=translationgazespanspan
-        span class=word-groupspan class=originalfijaspanspan class=translationfixedspanspan
-        span class=word-groupspan class=originalenspanspan class=translationonspanspan
-        span class=word-groupspan class=originalelspanspan class=translationthespanspan
-        span class=word-groupspan class=originalcinespanspan class=translationcinemaspanspan
-        span class=word-groupspan class=originaldelspanspan class=translationof thespanspan
-        span class=word-groupspan class=originalbarrio.spanspan class=translationneighborhood.spanspan
-    p
+    <p class="interlinear">
+        <span class="word-group"><span class="original">Caía</span><span class="translation">Was falling</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">noche</span><span class="translation">night</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">las</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">luces</span><span class="translation">lights</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">ciudad</span><span class="translation">city</span></span>
+        <span class="word-group"><span class="original">empezaban</span><span class="translation">were beginning</span></span>
+        <span class="word-group"><span class="original">a</span><span class="translation">to</span></span>
+        <span class="word-group"><span class="original">encenderse</span><span class="translation">turn on</span></span>
+        <span class="word-group"><span class="original">mientras</span><span class="translation">while</span></span>
+        <span class="word-group"><span class="original">Pedro</span><span class="translation">Pedro</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">Mateo</span><span class="translation">Mateo</span></span>
+        <span class="word-group"><span class="original">paseaban</span><span class="translation">were strolling</span></span>
+        <span class="word-group"><span class="original">por</span><span class="translation">along</span></span>
+        <span class="word-group"><span class="original">su</span><span class="translation">their</span></span>
+        <span class="word-group"><span class="original">calle</span><span class="translation">street</span></span>
+        <span class="word-group"><span class="original">de siempre.</span><span class="translation">usual.</span></span>
+        <span class="word-group"><span class="original">De repente,</span><span class="translation">Suddenly,</span></span>
+        <span class="word-group"><span class="original">Mateo</span><span class="translation">Mateo</span></span>
+        <span class="word-group"><span class="original">se paró en seco,</span><span class="translation">stopped dead,</span></span>
+        <span class="word-group"><span class="original">con</span><span class="translation">with</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">his</span></span>
+        <span class="word-group"><span class="original">mirada</span><span class="translation">gaze</span></span>
+        <span class="word-group"><span class="original">fija</span><span class="translation">fixed</span></span>
+        <span class="word-group"><span class="original">en</span><span class="translation">on</span></span>
+        <span class="word-group"><span class="original">el</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">cine</span><span class="translation">cinema</span></span>
+        <span class="word-group"><span class="original">del</span><span class="translation">of the</span></span>
+        <span class="word-group"><span class="original">barrio.</span><span class="translation">neighborhood.</span></span>
+    </p>
 
-    p class=interlinear
-        span class=word-groupspan class=original—Pedrospanspan class=translation—Pedrospanspan
-        span class=word-groupspan class=original—dijo,spanspan class=translation—he said,spanspan
-        span class=word-groupspan class=originalyspanspan class=translationandspanspan
-        span class=word-groupspan class=originalenspanspan class=translationinspanspan
-        span class=word-groupspan class=originalsuspanspan class=translationhisspanspan
-        span class=word-groupspan class=originalvozspanspan class=translationvoicespanspan
-        span class=word-groupspan class=originalse notabaspanspan class=translationwas noticeablespanspan
-        span class=word-groupspan class=originalunspanspan class=translationaspanspan
-        span class=word-groupspan class=originalhilospanspan class=translationthreadspanspan
-        span class=word-groupspan class=originaldespanspan class=translationofspanspan
-        span class=word-groupspan class=originalemoción—.spanspan class=translationemotion—.spanspan
-        span class=word-groupspan class=originalMiraspanspan class=translationLook atspanspan
-        span class=word-groupspan class=originaleso.spanspan class=translationthat.spanspan
-        span class=word-groupspan class=originalUnspanspan class=translationAspanspan
-        span class=word-groupspan class=originalrobotspanspan class=translationrobotspanspan
-        span class=word-groupspan class=originalgigante.spanspan class=translationgiant.spanspan
-    p
+    <p class="interlinear">
+        <span class="word-group"><span class="original">—Pedro</span><span class="translation">—Pedro</span></span>
+        <span class="word-group"><span class="original">—dijo,</span><span class="translation">—he said,</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">en</span><span class="translation">in</span></span>
+        <span class="word-group"><span class="original">su</span><span class="translation">his</span></span>
+        <span class="word-group"><span class="original">voz</span><span class="translation">voice</span></span>
+        <span class="word-group"><span class="original">se notaba</span><span class="translation">was noticeable</span></span>
+        <span class="word-group"><span class="original">un</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">hilo</span><span class="translation">thread</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">emoción—.</span><span class="translation">emotion—.</span></span>
+        <span class="word-group"><span class="original">Mira</span><span class="translation">Look at</span></span>
+        <span class="word-group"><span class="original">eso.</span><span class="translation">that.</span></span>
+        <span class="word-group"><span class="original">Un</span><span class="translation">A</span></span>
+        <span class="word-group"><span class="original">robot</span><span class="translation">robot</span></span>
+        <span class="word-group"><span class="original">gigante.</span><span class="translation">giant.</span></span>
+    </p>
 
-    p class=interlinear
-        span class=word-groupspan class=originalSeñalabaspanspan class=translationHe was pointing tospanspan
-        span class=word-groupspan class=originalunspanspan class=translationaspanspan
-        span class=word-groupspan class=originalcartelspanspan class=translationposterspanspan
-        span class=word-groupspan class=originalenormespanspan class=translationhugespanspan
-        span class=word-groupspan class=originalyspanspan class=translationandspanspan
-        span class=word-groupspan class=originalcolorido.spanspan class=translationcolorful.spanspan
-        span class=word-groupspan class=originalEnspanspan class=translationOnspanspan
-        span class=word-groupspan class=originalél,spanspan class=translationit,spanspan
-        span class=word-groupspan class=originalunspanspan class=translationaspanspan
-        span class=word-groupspan class=originalrelucientespanspan class=translationgleamingspanspan
-        span class=word-groupspan class=originalrobotspanspan class=translationrobotspanspan
-        span class=word-groupspan class=originaldespanspan class=translationofspanspan
-        span class=word-groupspan class=originalplataspanspan class=translationsilverspanspan
-        span class=word-groupspan class=originalposabaspanspan class=translationwas posingspanspan
-        span class=word-groupspan class=originalenspanspan class=translationinspanspan
-        span class=word-groupspan class=originalunaspanspan class=translationaspanspan
-        span class=word-groupspan class=originalciudadspanspan class=translationcityspanspan
-        span class=word-groupspan class=originalfuturista.spanspan class=translationfuturistic.spanspan
-        span class=word-groupspan class=originalAspanspan class=translationAtspanspan
-        span class=word-groupspan class=originalsuspanspan class=translationitsspanspan
-        span class=word-groupspan class=originallado,spanspan class=translationside,spanspan
-        span class=word-groupspan class=originalunaspanspan class=translationaspanspan
-        span class=word-groupspan class=originalpequeñaspanspan class=translationsmallspanspan
-        span class=word-groupspan class=originalcriaturaspanspan class=translationcreaturespanspan
-        span class=word-groupspan class=originalpeludaspanspan class=translationfurryspanspan
-        span class=word-groupspan class=originallospanspan class=translationitspanspan
-        span class=word-groupspan class=originalmirabaspanspan class=translationwas looking atspanspan
-        span class=word-groupspan class=originalconspanspan class=translationwithspanspan
-        span class=word-groupspan class=originaltotalspanspan class=translationtotalspanspan
-        span class=word-groupspan class=originalconfianza.spanspan class=translationtrust.spanspan
-    p
+    <p class="interlinear">
+        <span class="word-group"><span class="original">Señalaba</span><span class="translation">He was pointing to</span></span>
+        <span class="word-group"><span class="original">un</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">cartel</span><span class="translation">poster</span></span>
+        <span class="word-group"><span class="original">enorme</span><span class="translation">huge</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">colorido.</span><span class="translation">colorful.</span></span>
+        <span class="word-group"><span class="original">En</span><span class="translation">On</span></span>
+        <span class="word-group"><span class="original">él,</span><span class="translation">it,</span></span>
+        <span class="word-group"><span class="original">un</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">reluciente</span><span class="translation">gleaming</span></span>
+        <span class="word-group"><span class="original">robot</span><span class="translation">robot</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">plata</span><span class="translation">silver</span></span>
+        <span class="word-group"><span class="original">posaba</span><span class="translation">was posing</span></span>
+        <span class="word-group"><span class="original">en</span><span class="translation">in</span></span>
+        <span class="word-group"><span class="original">una</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">ciudad</span><span class="translation">city</span></span>
+        <span class="word-group"><span class="original">futurista.</span><span class="translation">futuristic.</span></span>
+        <span class="word-group"><span class="original">A</span><span class="translation">At</span></span>
+        <span class="word-group"><span class="original">su</span><span class="translation">its</span></span>
+        <span class="word-group"><span class="original">lado,</span><span class="translation">side,</span></span>
+        <span class="word-group"><span class="original">una</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">pequeña</span><span class="translation">small</span></span>
+        <span class="word-group"><span class="original">criatura</span><span class="translation">creature</span></span>
+        <span class="word-group"><span class="original">peluda</span><span class="translation">furry</span></span>
+        <span class="word-group"><span class="original">lo</span><span class="translation">it</span></span>
+        <span class="word-group"><span class="original">miraba</span><span class="translation">was looking at</span></span>
+        <span class="word-group"><span class="original">con</span><span class="translation">with</span></span>
+        <span class="word-group"><span class="original">total</span><span class="translation">total</span></span>
+        <span class="word-group"><span class="original">confianza.</span><span class="translation">trust.</span></span>
+    </p>
 
-    p class=interlinear
-        span class=word-groupspan class=original—Compañerosspanspan class=translationCompanionsspanspan
-        span class=word-groupspan class=originalCósmicosspanspan class=translationCosmicspanspan
-        span class=word-groupspan class=original—leyóspanspan class=translation—readspanspan
-        span class=word-groupspan class=originalMateospanspan class=translationMateospanspan
-        span class=word-groupspan class=originalen voz alta—.spanspan class=translationaloud—.spanspan
-        span class=word-groupspan class=originalLaspanspan class=translationThespanspan
-        span class=word-groupspan class=originalhistoriaspanspan class=translationstoryspanspan
-        span class=word-groupspan class=originaldespanspan class=translationofspanspan
-        span class=word-groupspan class=originalunspanspan class=translationaspanspan
-        span class=word-groupspan class=originalrobotspanspan class=translationrobotspanspan
-        span class=word-groupspan class=originalyspanspan class=translationandspanspan
-        span class=word-groupspan class=originalsuspanspan class=translationitsspanspan
-        span class=word-groupspan class=originalamigo.spanspan class=translationfriend.spanspan
-        span class=word-groupspan class=original¡Hay quespanspan class=translationOne has tospanspan
-        span class=word-groupspan class=originalverla!spanspan class=translationsee it!spanspan
-    p
+    <p class="interlinear">
+        <span class="word-group"><span class="original">—Compañeros</span><span class="translation">Companions</span></span>
+        <span class="word-group"><span class="original">Cósmicos</span><span class="translation">Cosmic</span></span>
+        <span class="word-group"><span class="original">—leyó</span><span class="translation">—read</span></span>
+        <span class="word-group"><span class="original">Mateo</span><span class="translation">Mateo</span></span>
+        <span class="word-group"><span class="original">en voz alta—.</span><span class="translation">aloud—.</span></span>
+        <span class="word-group"><span class="original">La</span><span class="translation">The</span></span>
+        <span class="word-group"><span class="original">historia</span><span class="translation">story</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">un</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">robot</span><span class="translation">robot</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">su</span><span class="translation">its</span></span>
+        <span class="word-group"><span class="original">amigo.</span><span class="translation">friend.</span></span>
+        <span class="word-group"><span class="original">¡Hay que</span><span class="translation">One has to</span></span>
+        <span class="word-group"><span class="original">verla!</span><span class="translation">see it!</span></span>
+    </p>
 
-     p class=interlinear
-        span class=word-groupspan class=originalPedrospanspan class=translationPedrospanspan
-        span class=word-groupspan class=originaldesvióspanspan class=translationavertedspanspan
-        span class=word-groupspan class=originallaspanspan class=translationhisspanspan
-        span class=word-groupspan class=originalvistaspanspan class=translationgazespanspan
-        span class=word-groupspan class=originaldelspanspan class=translationfrom thespanspan
-        span class=word-groupspan class=originalcartelspanspan class=translationposterspanspan
-        span class=word-groupspan class=originalaspanspan class=translationtospanspan
-        span class=word-groupspan class=originallaspanspan class=translationthespanspan
-        span class=word-groupspan class=originalcaraspanspan class=translationfacespanspan
-        span class=word-groupspan class=originaldespanspan class=translationofspanspan
-        span class=word-groupspan class=originalpuraspanspan class=translationpurespanspan
-        span class=word-groupspan class=originalfascinaciónspanspan class=translationfascinationspanspan
-        span class=word-groupspan class=originaldespanspan class=translationofspanspan
-        span class=word-groupspan class=originalMateo.spanspan class=translationMateo.spanspan
-        span class=word-groupspan class=originalSespanspan class=translationHespanspan
-        span class=word-groupspan class=originalajustóspanspan class=translationadjustedspanspan
-        span class=word-groupspan class=originallaspanspan class=translationthespanspan
-        span class=word-groupspan class=originalcorreaspanspan class=translationstrapspanspan
-        span class=word-groupspan class=originaldespanspan class=translationofspanspan
-        span class=word-groupspan class=originalsuspanspan class=translationhisspanspan
-        span class=word-groupspan class=originalbolsospanspan class=translationbagspanspan
-        span class=word-groupspan class=originaldespanspan class=translationofspanspan
-        span class=word-groupspan class=originalcuero.spanspan class=translationleather.spanspan
-    p
+     <p class="interlinear">
+        <span class="word-group"><span class="original">Pedro</span><span class="translation">Pedro</span></span>
+        <span class="word-group"><span class="original">desvió</span><span class="translation">averted</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">his</span></span>
+        <span class="word-group"><span class="original">vista</span><span class="translation">gaze</span></span>
+        <span class="word-group"><span class="original">del</span><span class="translation">from the</span></span>
+        <span class="word-group"><span class="original">cartel</span><span class="translation">poster</span></span>
+        <span class="word-group"><span class="original">a</span><span class="translation">to</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">cara</span><span class="translation">face</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">pura</span><span class="translation">pure</span></span>
+        <span class="word-group"><span class="original">fascinación</span><span class="translation">fascination</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">Mateo.</span><span class="translation">Mateo.</span></span>
+        <span class="word-group"><span class="original">Se</span><span class="translation">He</span></span>
+        <span class="word-group"><span class="original">ajustó</span><span class="translation">adjusted</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">correa</span><span class="translation">strap</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">su</span><span class="translation">his</span></span>
+        <span class="word-group"><span class="original">bolso</span><span class="translation">bag</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">cuero.</span><span class="translation">leather.</span></span>
+    </p>
     
-    p class=interlinear
-        span class=word-groupspan class=original—Unaspanspan class=translation—Aspanspan
-        span class=word-groupspan class=originalodiseaspanspan class=translationodysseyspanspan
-        span class=word-groupspan class=originalespacial,spanspan class=translationspace,spanspan
-        span class=word-groupspan class=originalpor lo que parecespanspan class=translationfrom what it seemsspanspan
-        span class=word-groupspan class=original—comentó,spanspan class=translation—he commented,spanspan
-        span class=word-groupspan class=originalconspanspan class=translationwithspanspan
-        span class=word-groupspan class=originalsuspanspan class=translationhisspanspan
-        span class=word-groupspan class=originalhabitualspanspan class=translationusualspanspan
-        span class=word-groupspan class=originaltonospanspan class=translationtonespanspan
-        span class=word-groupspan class=originalsereno—.spanspan class=translationcalm—.spanspan
-        span class=word-groupspan class=originalHabrá que verspanspan class=translationWe'll have to seespanspan
-        span class=word-groupspan class=originalquéspanspan class=translationwhatspanspan
-        span class=word-groupspan class=originalclasespanspan class=translationkindspanspan
-        span class=word-groupspan class=originaldespanspan class=translationofspanspan
-        span class=word-groupspan class=originalproblemasspanspan class=translationproblemsspanspan
-        span class=word-groupspan class=originalcósmicosspanspan class=translationcosmicspanspan
-        span class=word-groupspan class=originalsolucionan.spanspan class=translationthey solve.spanspan
-        span class=word-groupspan class=originalDuraspanspan class=translationIt lastsspanspan
-        span class=word-groupspan class=originalnoventaspanspan class=translationninetyspanspan
-        span class=word-groupspan class=originalyspanspan class=translationandspanspan
-        span class=word-groupspan class=originaldosspanspan class=translationtwospanspan
-        span class=word-groupspan class=originalminutos,spanspan class=translationminutes,spanspan
-        span class=word-groupspan class=originalasí quespanspan class=translationsospanspan
-        span class=word-groupspan class=originaltendrán quespanspan class=translationthey will have tospanspan
-        span class=word-groupspan class=originaldarse prisa.spanspan class=translationhurry up.spanspan
-    p
+    <p class="interlinear">
+        <span class="word-group"><span class="original">—Una</span><span class="translation">—A</span></span>
+        <span class="word-group"><span class="original">odisea</span><span class="translation">odyssey</span></span>
+        <span class="word-group"><span class="original">espacial,</span><span class="translation">space,</span></span>
+        <span class="word-group"><span class="original">por lo que parece</span><span class="translation">from what it seems</span></span>
+        <span class="word-group"><span class="original">—comentó,</span><span class="translation">—he commented,</span></span>
+        <span class="word-group"><span class="original">con</span><span class="translation">with</span></span>
+        <span class="word-group"><span class="original">su</span><span class="translation">his</span></span>
+        <span class="word-group"><span class="original">habitual</span><span class="translation">usual</span></span>
+        <span class="word-group"><span class="original">tono</span><span class="translation">tone</span></span>
+        <span class="word-group"><span class="original">sereno—.</span><span class="translation">calm—.</span></span>
+        <span class="word-group"><span class="original">Habrá que ver</span><span class="translation">We'll have to see</span></span>
+        <span class="word-group"><span class="original">qué</span><span class="translation">what</span></span>
+        <span class="word-group"><span class="original">clase</span><span class="translation">kind</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">problemas</span><span class="translation">problems</span></span>
+        <span class="word-group"><span class="original">cósmicos</span><span class="translation">cosmic</span></span>
+        <span class="word-group"><span class="original">solucionan.</span><span class="translation">they solve.</span></span>
+        <span class="word-group"><span class="original">Dura</span><span class="translation">It lasts</span></span>
+        <span class="word-group"><span class="original">noventa</span><span class="translation">ninety</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">dos</span><span class="translation">two</span></span>
+        <span class="word-group"><span class="original">minutos,</span><span class="translation">minutes,</span></span>
+        <span class="word-group"><span class="original">así que</span><span class="translation">so</span></span>
+        <span class="word-group"><span class="original">tendrán que</span><span class="translation">they will have to</span></span>
+        <span class="word-group"><span class="original">darse prisa.</span><span class="translation">hurry up.</span></span>
+    </p>
 
-    p class=interlinear
-        span class=word-groupspan class=originalMateospanspan class=translationMateospanspan
-        span class=word-groupspan class=originalnospanspan class=translationdidn'tspanspan
-        span class=word-groupspan class=originalapartabaspanspan class=translationtake awayspanspan
-        span class=word-groupspan class=originallosspanspan class=translationhisspanspan
-        span class=word-groupspan class=originalojosspanspan class=translationeyesspanspan
-        span class=word-groupspan class=originaldelspanspan class=translationfrom thespanspan
-        span class=word-groupspan class=originalcartel,spanspan class=translationposter,spanspan
-        span class=word-groupspan class=originalcasispanspan class=translationalmostspanspan
-        span class=word-groupspan class=originalvibrandospanspan class=translationvibratingspanspan
-        span class=word-groupspan class=originaldespanspan class=translationwithspanspan
-        span class=word-groupspan class=originallaspanspan class=translationthespanspan
-        span class=word-groupspan class=originalemoción.spanspan class=translationexcitement.spanspan
-        span class=word-groupspan class=originalAlspanspan class=translationUponspanspan
-        span class=word-groupspan class=originalverlospanspan class=translationseeing himspanspan
-        span class=word-groupspan class=originalasí,spanspan class=translationlike that,spanspan
-        span class=word-groupspan class=originalPedrospanspan class=translationPedrospanspan
-        span class=word-groupspan class=originalsuspiróspanspan class=translationsighedspanspan
-        span class=word-groupspan class=originaldespanspan class=translationinspanspan
-        span class=word-groupspan class=originalesaspanspan class=translationthatspanspan
-        span class=word-groupspan class=originalformaspanspan class=translationwayspanspan
-        span class=word-groupspan class=originalcasispanspan class=translationalmostspanspan
-        span class=word-groupspan class=originalimperceptiblespanspan class=translationimperceptiblespanspan
-        span class=word-groupspan class=originalquespanspan class=translationthatspanspan
-        span class=word-groupspan class=originalsolospanspan class=translationonlyspanspan
-        span class=word-groupspan class=originallespanspan class=translationto himspanspan
-        span class=word-groupspan class=originaldedicabaspanspan class=translationhe dedicatedspanspan
-        span class=word-groupspan class=originalaspanspan class=translationtospanspan
-        span class=word-groupspan class=originalél.spanspan class=translationhim.spanspan
-    p
+    <p class="interlinear">
+        <span class="word-group"><span class="original">Mateo</span><span class="translation">Mateo</span></span>
+        <span class="word-group"><span class="original">no</span><span class="translation">didn't</span></span>
+        <span class="word-group"><span class="original">apartaba</span><span class="translation">take away</span></span>
+        <span class="word-group"><span class="original">los</span><span class="translation">his</span></span>
+        <span class="word-group"><span class="original">ojos</span><span class="translation">eyes</span></span>
+        <span class="word-group"><span class="original">del</span><span class="translation">from the</span></span>
+        <span class="word-group"><span class="original">cartel,</span><span class="translation">poster,</span></span>
+        <span class="word-group"><span class="original">casi</span><span class="translation">almost</span></span>
+        <span class="word-group"><span class="original">vibrando</span><span class="translation">vibrating</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">with</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">emoción.</span><span class="translation">excitement.</span></span>
+        <span class="word-group"><span class="original">Al</span><span class="translation">Upon</span></span>
+        <span class="word-group"><span class="original">verlo</span><span class="translation">seeing him</span></span>
+        <span class="word-group"><span class="original">así,</span><span class="translation">like that,</span></span>
+        <span class="word-group"><span class="original">Pedro</span><span class="translation">Pedro</span></span>
+        <span class="word-group"><span class="original">suspiró</span><span class="translation">sighed</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">in</span></span>
+        <span class="word-group"><span class="original">esa</span><span class="translation">that</span></span>
+        <span class="word-group"><span class="original">forma</span><span class="translation">way</span></span>
+        <span class="word-group"><span class="original">casi</span><span class="translation">almost</span></span>
+        <span class="word-group"><span class="original">imperceptible</span><span class="translation">imperceptible</span></span>
+        <span class="word-group"><span class="original">que</span><span class="translation">that</span></span>
+        <span class="word-group"><span class="original">solo</span><span class="translation">only</span></span>
+        <span class="word-group"><span class="original">le</span><span class="translation">to him</span></span>
+        <span class="word-group"><span class="original">dedicaba</span><span class="translation">he dedicated</span></span>
+        <span class="word-group"><span class="original">a</span><span class="translation">to</span></span>
+        <span class="word-group"><span class="original">él.</span><span class="translation">him.</span></span>
+    </p>
 
-    p class=interlinear
-        span class=word-groupspan class=original—Laspanspan class=translation—Thespanspan
-        span class=word-groupspan class=originalsiguientespanspan class=translationnextspanspan
-        span class=word-groupspan class=originalsesiónspanspan class=translationsessionspanspan
-        span class=word-groupspan class=originalempiezaspanspan class=translationstartsspanspan
-        span class=word-groupspan class=originalenspanspan class=translationinspanspan
-        span class=word-groupspan class=originaldiezspanspan class=translationtenspanspan
-        span class=word-groupspan class=originalminutosspanspan class=translationminutesspanspan
-        span class=word-groupspan class=original—dijo,spanspan class=translation—he said,spanspan
-        span class=word-groupspan class=originalsacandospanspan class=translationtaking outspanspan
-        span class=word-groupspan class=originallaspanspan class=translationhisspanspan
-        span class=word-groupspan class=originalcartera—.spanspan class=translationwallet—.spanspan
-        span class=word-groupspan class=originalEstá bien.spanspan class=translationAlright.spanspan
-        span class=word-groupspan class=originalVamos a verspanspan class=translationLet's seespanspan
-        span class=word-groupspan class=originalqué talspanspan class=translationwhat...is likespanspan
-        span class=word-groupspan class=originalesaspanspan class=translationthatspanspan
-        span class=word-groupspan class=originalamistadspanspan class=translationfriendshipspanspan
-        span class=word-groupspan class=originalcósmica.spanspan class=translationcosmic.spanspan
-    p
+    <p class="interlinear">
+        <span class="word-group"><span class="original">—La</span><span class="translation">—The</span></span>
+        <span class="word-group"><span class="original">siguiente</span><span class="translation">next</span></span>
+        <span class="word-group"><span class="original">sesión</span><span class="translation">session</span></span>
+        <span class="word-group"><span class="original">empieza</span><span class="translation">starts</span></span>
+        <span class="word-group"><span class="original">en</span><span class="translation">in</span></span>
+        <span class="word-group"><span class="original">diez</span><span class="translation">ten</span></span>
+        <span class="word-group"><span class="original">minutos</span><span class="translation">minutes</span></span>
+        <span class="word-group"><span class="original">—dijo,</span><span class="translation">—he said,</span></span>
+        <span class="word-group"><span class="original">sacando</span><span class="translation">taking out</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">his</span></span>
+        <span class="word-group"><span class="original">cartera—.</span><span class="translation">wallet—.</span></span>
+        <span class="word-group"><span class="original">Está bien.</span><span class="translation">Alright.</span></span>
+        <span class="word-group"><span class="original">Vamos a ver</span><span class="translation">Let's see</span></span>
+        <span class="word-group"><span class="original">qué tal</span><span class="translation">what...is like</span></span>
+        <span class="word-group"><span class="original">esa</span><span class="translation">that</span></span>
+        <span class="word-group"><span class="original">amistad</span><span class="translation">friendship</span></span>
+        <span class="word-group"><span class="original">cósmica.</span><span class="translation">cosmic.</span></span>
+    </p>
 
-    p class=interlinear
-        span class=word-groupspan class=originalNada más entrar,spanspan class=translationAs soon as they entered,spanspan
-        span class=word-groupspan class=originallosspanspan class=translationthemspanspan
-        span class=word-groupspan class=originalrecibióspanspan class=translationgreetedspanspan
-        span class=word-groupspan class=originalunspanspan class=translationanspanspan
-        span class=word-groupspan class=originalintensospanspan class=translationintensespanspan
-        span class=word-groupspan class=originalolorspanspan class=translationsmellspanspan
-        span class=word-groupspan class=originalaspanspan class=translationofspanspan
-        span class=word-groupspan class=originalmantequillaspanspan class=translationbutterspanspan
-        span class=word-groupspan class=originalyspanspan class=translationandspanspan
-        span class=word-groupspan class=originalsal.spanspan class=translationsalt.spanspan
-    p
+    <p class="interlinear">
+        <span class="word-group"><span class="original">Nada más entrar,</span><span class="translation">As soon as they entered,</span></span>
+        <span class="word-group"><span class="original">los</span><span class="translation">them</span></span>
+        <span class="word-group"><span class="original">recibió</span><span class="translation">greeted</span></span>
+        <span class="word-group"><span class="original">un</span><span class="translation">an</span></span>
+        <span class="word-group"><span class="original">intenso</span><span class="translation">intense</span></span>
+        <span class="word-group"><span class="original">olor</span><span class="translation">smell</span></span>
+        <span class="word-group"><span class="original">a</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">mantequilla</span><span class="translation">butter</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">sal.</span><span class="translation">salt.</span></span>
+    </p>
 
-    p class=interlinear
-        span class=word-groupspan class=original—Ah,spanspan class=translation—Ah,spanspan
-        span class=word-groupspan class=originalpalomitasspanspan class=translationpopcornspanspan
-        span class=word-groupspan class=original—dijospanspan class=translation—saidspanspan
-        span class=word-groupspan class=originalMateo,spanspan class=translationMateo,spanspan
-        span class=word-groupspan class=originalinspirandospanspan class=translationbreathing inspanspan
-        span class=word-groupspan class=originalhondo—.spanspan class=translationdeeply—.spanspan
-        span class=word-groupspan class=originalElspanspan class=translationThespanspan
-        span class=word-groupspan class=originalcombustiblespanspan class=translationfuelspanspan
-        span class=word-groupspan class=originaloficialspanspan class=translationofficialspanspan
-        span class=word-groupspan class=originaldespanspan class=translationofspanspan
-        span class=word-groupspan class=originallosspanspan class=translationthespanspan
-        span class=word-groupspan class=originalcinéfilos.spanspan class=translationcinephiles.spanspan
-    p
+    <p class="interlinear">
+        <span class="word-group"><span class="original">—Ah,</span><span class="translation">—Ah,</span></span>
+        <span class="word-group"><span class="original">palomitas</span><span class="translation">popcorn</span></span>
+        <span class="word-group"><span class="original">—dijo</span><span class="translation">—said</span></span>
+        <span class="word-group"><span class="original">Mateo,</span><span class="translation">Mateo,</span></span>
+        <span class="word-group"><span class="original">inspirando</span><span class="translation">breathing in</span></span>
+        <span class="word-group"><span class="original">hondo—.</span><span class="translation">deeply—.</span></span>
+        <span class="word-group"><span class="original">El</span><span class="translation">The</span></span>
+        <span class="word-group"><span class="original">combustible</span><span class="translation">fuel</span></span>
+        <span class="word-group"><span class="original">oficial</span><span class="translation">official</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">los</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">cinéfilos.</span><span class="translation">cinephiles.</span></span>
+    </p>
     
-    p class=interlinear
-        span class=word-groupspan class=originalConspanspan class=translationWithspanspan
-        span class=word-groupspan class=originalsuspanspan class=translationhisspanspan
-        span class=word-groupspan class=originalcalmaspanspan class=translationcalmspanspan
-        span class=word-groupspan class=originalde siempre,spanspan class=translationof always,spanspan
-        span class=word-groupspan class=originalPedrospanspan class=translationPedrospanspan
-        span class=word-groupspan class=originalcompróspanspan class=translationboughtspanspan
-        span class=word-groupspan class=originallasspanspan class=translationthespanspan
-        span class=word-groupspan class=originalentradasspanspan class=translationticketsspanspan
-        span class=word-groupspan class=originalyspanspan class=translationandspanspan
-        span class=word-groupspan class=originalunspanspan class=translationaspanspan
-        span class=word-groupspan class=originalcubospanspan class=translationbucketspanspan
-        span class=word-groupspan class=originaldespanspan class=translationofspanspan
-        span class=word-groupspan class=originalpalomitasspanspan class=translationpopcornspanspan
-        span class=word-groupspan class=originalquespanspan class=translationthatspanspan
-        span class=word-groupspan class=originallespanspan class=translationto himspanspan
-        span class=word-groupspan class=originalentregóspanspan class=translationhe handedspanspan
-        span class=word-groupspan class=originalaspanspan class=translationtospanspan
-        span class=word-groupspan class=originalMateo.spanspan class=translationMateo.spanspan
-        span class=word-groupspan class=originalYaspanspan class=translationAlreadyspanspan
-        span class=word-groupspan class=originalenspanspan class=translationinspanspan
-        span class=word-groupspan class=originallaspanspan class=translationthespanspan
-        span class=word-groupspan class=originaloscuridadspanspan class=translationdarknessspanspan
-        span class=word-groupspan class=originaldespanspan class=translationofspanspan
-        span class=word-groupspan class=originallaspanspan class=translationthespanspan
-        span class=word-groupspan class=originalsala,spanspan class=translationroom,spanspan
-        span class=word-groupspan class=originalencontraronspanspan class=translationthey foundspanspan
-        span class=word-groupspan class=originalsusspanspan class=translationtheirspanspan
-        span class=word-groupspan class=originalasientos.spanspan class=translationseats.spanspan
-        span class=word-groupspan class=originalEn cuantospanspan class=translationAs soon asspanspan
-        span class=word-groupspan class=originallasspanspan class=translationthespanspan
-        span class=word-groupspan class=originallucesspanspan class=translationlightsspanspan
-        span class=word-groupspan class=originalse apagaron,spanspan class=translationwent out,spanspan
-        span class=word-groupspan class=originalMateospanspan class=translationMateospanspan
-        span class=word-groupspan class=originalse acomodóspanspan class=translationsettled inspanspan
-        span class=word-groupspan class=originalenspanspan class=translationinspanspan
-        span class=word-groupspan class=originallaspanspan class=translationthespanspan
-        span class=word-groupspan class=originalbutaca,spanspan class=translationseat,spanspan
-        span class=word-groupspan class=originallistospanspan class=translationreadyspanspan
-        span class=word-groupspan class=originalparaspanspan class=translationtospanspan
-        span class=word-groupspan class=originalsumergirsespanspan class=translationimmerse himselfspanspan
-        span class=word-groupspan class=originalenspanspan class=translationinspanspan
-        span class=word-groupspan class=originallaspanspan class=translationthespanspan
-        span class=word-groupspan class=originalhistoria.spanspan class=translationstory.spanspan
-    p
+    <p class="interlinear">
+        <span class="word-group"><span class="original">Con</span><span class="translation">With</span></span>
+        <span class="word-group"><span class="original">su</span><span class="translation">his</span></span>
+        <span class="word-group"><span class="original">calma</span><span class="translation">calm</span></span>
+        <span class="word-group"><span class="original">de siempre,</span><span class="translation">of always,</span></span>
+        <span class="word-group"><span class="original">Pedro</span><span class="translation">Pedro</span></span>
+        <span class="word-group"><span class="original">compró</span><span class="translation">bought</span></span>
+        <span class="word-group"><span class="original">las</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">entradas</span><span class="translation">tickets</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">un</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">cubo</span><span class="translation">bucket</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">palomitas</span><span class="translation">popcorn</span></span>
+        <span class="word-group"><span class="original">que</span><span class="translation">that</span></span>
+        <span class="word-group"><span class="original">le</span><span class="translation">to him</span></span>
+        <span class="word-group"><span class="original">entregó</span><span class="translation">he handed</span></span>
+        <span class="word-group"><span class="original">a</span><span class="translation">to</span></span>
+        <span class="word-group"><span class="original">Mateo.</span><span class="translation">Mateo.</span></span>
+        <span class="word-group"><span class="original">Ya</span><span class="translation">Already</span></span>
+        <span class="word-group"><span class="original">en</span><span class="translation">in</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">oscuridad</span><span class="translation">darkness</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">sala,</span><span class="translation">room,</span></span>
+        <span class="word-group"><span class="original">encontraron</span><span class="translation">they found</span></span>
+        <span class="word-group"><span class="original">sus</span><span class="translation">their</span></span>
+        <span class="word-group"><span class="original">asientos.</span><span class="translation">seats.</span></span>
+        <span class="word-group"><span class="original">En cuanto</span><span class="translation">As soon as</span></span>
+        <span class="word-group"><span class="original">las</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">luces</span><span class="translation">lights</span></span>
+        <span class="word-group"><span class="original">se apagaron,</span><span class="translation">went out,</span></span>
+        <span class="word-group"><span class="original">Mateo</span><span class="translation">Mateo</span></span>
+        <span class="word-group"><span class="original">se acomodó</span><span class="translation">settled in</span></span>
+        <span class="word-group"><span class="original">en</span><span class="translation">in</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">butaca,</span><span class="translation">seat,</span></span>
+        <span class="word-group"><span class="original">listo</span><span class="translation">ready</span></span>
+        <span class="word-group"><span class="original">para</span><span class="translation">to</span></span>
+        <span class="word-group"><span class="original">sumergirse</span><span class="translation">immerse himself</span></span>
+        <span class="word-group"><span class="original">en</span><span class="translation">in</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">historia.</span><span class="translation">story.</span></span>
+    </p>
 
-    p class=interlinear
-        span class=word-groupspan class=originalDurantespanspan class=translationDuringspanspan
-        span class=word-groupspan class=originallaspanspan class=translationthespanspan
-        span class=word-groupspan class=originalpelícula,spanspan class=translationmovie,spanspan
-        span class=word-groupspan class=originalMateospanspan class=translationMateospanspan
-        span class=word-groupspan class=originalvivióspanspan class=translationlivedspanspan
-        span class=word-groupspan class=originalcadaspanspan class=translationeachspanspan
-        span class=word-groupspan class=originalescenaspanspan class=translationscenespanspan
-        span class=word-groupspan class=originalconspanspan class=translationwithspanspan
-        span class=word-groupspan class=originaltotalspanspan class=translationtotalspanspan
-        span class=word-groupspan class=originalsinceridad.spanspan class=translationsincerity.spanspan
-        span class=word-groupspan class=originalSe reía a carcajadasspanspan class=translationHe laughed out loudspanspan
-        span class=word-groupspan class=originalenspanspan class=translationatspanspan
-        span class=word-groupspan class=originallosspanspan class=translationthespanspan
-        span class=word-groupspan class=originalmomentosspanspan class=translationmomentsspanspan
-        span class=word-groupspan class=originalcómicosspanspan class=translationcomedicspanspan
-        span class=word-groupspan class=originalyspanspan class=translationandspanspan
-        span class=word-groupspan class=originalse inclinabaspanspan class=translationleanedspanspan
-        span class=word-groupspan class=originalhacia adelantespanspan class=translationforwardspanspan
-        span class=word-groupspan class=originalenspanspan class=translationinspanspan
-        span class=word-groupspan class=originallosspanspan class=translationthe (ones)spanspan
-        span class=word-groupspan class=originaldespanspan class=translationofspanspan
-        span class=word-groupspan class=originaltensión.spanspan class=translationtension.spanspan
-        span class=word-groupspan class=originalEstabaspanspan class=translationHe wasspanspan
-        span class=word-groupspan class=originaltotalmentespanspan class=translationtotallyspanspan
-        span class=word-groupspan class=originalentregadospanspan class=translationengrossedspanspan
-        span class=word-groupspan class=originalaspanspan class=translationinspanspan
-        span class=word-groupspan class=originallaspanspan class=translationthespanspan
-        span class=word-groupspan class=originalpelícula.spanspan class=translationmovie.spanspan
-        span class=word-groupspan class=originalPedro,spanspan class=translationPedro,spanspan
-        span class=word-groupspan class=originalaspanspan class=translationatspanspan
-        span class=word-groupspan class=originalsuspanspan class=translationhisspanspan
-        span class=word-groupspan class=originallado,spanspan class=translationside,spanspan
-        span class=word-groupspan class=originaleraspanspan class=translationwasspanspan
-        span class=word-groupspan class=originalunaspanspan class=translationaspanspan
-        span class=word-groupspan class=originalpresenciaspanspan class=translationpresencespanspan
-        span class=word-groupspan class=originaltranquila;spanspan class=translationcalm;spanspan
-        span class=word-groupspan class=originalveíaspanspan class=translationhe watchedspanspan
-        span class=word-groupspan class=originallaspanspan class=translationthespanspan
-        span class=word-groupspan class=originalpelículaspanspan class=translationmoviespanspan
-        span class=word-groupspan class=originalconspanspan class=translationwithspanspan
-        span class=word-groupspan class=originalunaspanspan class=translationaspanspan
-        span class=word-groupspan class=originalmediaspanspan class=translationhalfspanspan
-        span class=word-groupspan class=originalsonrisa,spanspan class=translationsmile,spanspan
-        span class=word-groupspan class=originaldisfrutandospanspan class=translationenjoyingspanspan
-        span class=word-groupspan class=originaltantospanspan class=translationas muchspanspan
-        span class=word-groupspan class=originaldespanspan class=translationofspanspan
-        span class=word-groupspan class=originallaspanspan class=translationthespanspan
-        span class=word-groupspan class=originaltramaspanspan class=translationplotspanspan
-        span class=word-groupspan class=originalcomospanspan class=translationasspanspan
-        span class=word-groupspan class=originaldespanspan class=translationofspanspan
-        span class=word-groupspan class=originallasspanspan class=translationthespanspan
-        span class=word-groupspan class=originalreaccionesspanspan class=translationreactionsspanspan
-        span class=word-groupspan class=originaldespanspan class=translationofspanspan
-        span class=word-groupspan class=originalsuspanspan class=translationhisspanspan
-        span class=word-groupspan class=originalamigo.spanspan class=translationfriend.spanspan
-    p
+    <p class="interlinear">
+        <span class="word-group"><span class="original">Durante</span><span class="translation">During</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">película,</span><span class="translation">movie,</span></span>
+        <span class="word-group"><span class="original">Mateo</span><span class="translation">Mateo</span></span>
+        <span class="word-group"><span class="original">vivió</span><span class="translation">lived</span></span>
+        <span class="word-group"><span class="original">cada</span><span class="translation">each</span></span>
+        <span class="word-group"><span class="original">escena</span><span class="translation">scene</span></span>
+        <span class="word-group"><span class="original">con</span><span class="translation">with</span></span>
+        <span class="word-group"><span class="original">total</span><span class="translation">total</span></span>
+        <span class="word-group"><span class="original">sinceridad.</span><span class="translation">sincerity.</span></span>
+        <span class="word-group"><span class="original">Se reía a carcajadas</span><span class="translation">He laughed out loud</span></span>
+        <span class="word-group"><span class="original">en</span><span class="translation">at</span></span>
+        <span class="word-group"><span class="original">los</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">momentos</span><span class="translation">moments</span></span>
+        <span class="word-group"><span class="original">cómicos</span><span class="translation">comedic</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">se inclinaba</span><span class="translation">leaned</span></span>
+        <span class="word-group"><span class="original">hacia adelante</span><span class="translation">forward</span></span>
+        <span class="word-group"><span class="original">en</span><span class="translation">in</span></span>
+        <span class="word-group"><span class="original">los</span><span class="translation">the (ones)</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">tensión.</span><span class="translation">tension.</span></span>
+        <span class="word-group"><span class="original">Estaba</span><span class="translation">He was</span></span>
+        <span class="word-group"><span class="original">totalmente</span><span class="translation">totally</span></span>
+        <span class="word-group"><span class="original">entregado</span><span class="translation">engrossed</span></span>
+        <span class="word-group"><span class="original">a</span><span class="translation">in</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">película.</span><span class="translation">movie.</span></span>
+        <span class="word-group"><span class="original">Pedro,</span><span class="translation">Pedro,</span></span>
+        <span class="word-group"><span class="original">a</span><span class="translation">at</span></span>
+        <span class="word-group"><span class="original">su</span><span class="translation">his</span></span>
+        <span class="word-group"><span class="original">lado,</span><span class="translation">side,</span></span>
+        <span class="word-group"><span class="original">era</span><span class="translation">was</span></span>
+        <span class="word-group"><span class="original">una</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">presencia</span><span class="translation">presence</span></span>
+        <span class="word-group"><span class="original">tranquila;</span><span class="translation">calm;</span></span>
+        <span class="word-group"><span class="original">veía</span><span class="translation">he watched</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">película</span><span class="translation">movie</span></span>
+        <span class="word-group"><span class="original">con</span><span class="translation">with</span></span>
+        <span class="word-group"><span class="original">una</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">media</span><span class="translation">half</span></span>
+        <span class="word-group"><span class="original">sonrisa,</span><span class="translation">smile,</span></span>
+        <span class="word-group"><span class="original">disfrutando</span><span class="translation">enjoying</span></span>
+        <span class="word-group"><span class="original">tanto</span><span class="translation">as much</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">trama</span><span class="translation">plot</span></span>
+        <span class="word-group"><span class="original">como</span><span class="translation">as</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">las</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">reacciones</span><span class="translation">reactions</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">su</span><span class="translation">his</span></span>
+        <span class="word-group"><span class="original">amigo.</span><span class="translation">friend.</span></span>
+    </p>
 
-    p class=interlinear
-        span class=word-groupspan class=originalCuandospanspan class=translationWhenspanspan
-        span class=word-groupspan class=originalaparecieronspanspan class=translationappearedspanspan
-        span class=word-groupspan class=originallosspanspan class=translationthespanspan
-        span class=word-groupspan class=originalcréditosspanspan class=translationcreditsspanspan
-        span class=word-groupspan class=originalyspanspan class=translationandspanspan
-        span class=word-groupspan class=originalse encendieronspanspan class=translationcame onspanspan
-        span class=word-groupspan class=originallasspanspan class=translationthespanspan
-        span class=word-groupspan class=originalluces,spanspan class=translationlights,spanspan
-        span class=word-groupspan class=originalMateospanspan class=translationMateospanspan
-        span class=word-groupspan class=originalse desperezóspanspan class=translationstretchedspanspan
-        span class=word-groupspan class=originalenspanspan class=translationinspanspan
-        span class=word-groupspan class=originalelspanspan class=translationthespanspan
-        span class=word-groupspan class=originalasiento,spanspan class=translationseat,spanspan
-        span class=word-groupspan class=originalconspanspan class=translationwithspanspan
-        span class=word-groupspan class=originalunaspanspan class=translationaspanspan
-        span class=word-groupspan class=originalsonrisaspanspan class=translationsmilespanspan
-        span class=word-groupspan class=originaldespanspan class=translationofspanspan
-        span class=word-groupspan class=originalsatisfacción.spanspan class=translationsatisfaction.spanspan
-    p
+    <p class="interlinear">
+        <span class="word-group"><span class="original">Cuando</span><span class="translation">When</span></span>
+        <span class="word-group"><span class="original">aparecieron</span><span class="translation">appeared</span></span>
+        <span class="word-group"><span class="original">los</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">créditos</span><span class="translation">credits</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">se encendieron</span><span class="translation">came on</span></span>
+        <span class="word-group"><span class="original">las</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">luces,</span><span class="translation">lights,</span></span>
+        <span class="word-group"><span class="original">Mateo</span><span class="translation">Mateo</span></span>
+        <span class="word-group"><span class="original">se desperezó</span><span class="translation">stretched</span></span>
+        <span class="word-group"><span class="original">en</span><span class="translation">in</span></span>
+        <span class="word-group"><span class="original">el</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">asiento,</span><span class="translation">seat,</span></span>
+        <span class="word-group"><span class="original">con</span><span class="translation">with</span></span>
+        <span class="word-group"><span class="original">una</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">sonrisa</span><span class="translation">smile</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">satisfacción.</span><span class="translation">satisfaction.</span></span>
+    </p>
     
-    p class=interlinear
-        span class=word-groupspan class=original—Quéspanspan class=translation—What aspanspan
-        span class=word-groupspan class=originalbuenaspanspan class=translationgoodspanspan
-        span class=word-groupspan class=originalhistoriaspanspan class=translationstoryspanspan
-        span class=word-groupspan class=original—comentóspanspan class=translation—he commentedspanspan
-        span class=word-groupspan class=originalmientrasspanspan class=translationwhilespanspan
-        span class=word-groupspan class=originalsalíanspanspan class=translationthey went outspanspan
-        span class=word-groupspan class=originalalspanspan class=translationinto thespanspan
-        span class=word-groupspan class=originalairespanspan class=translationairspanspan
-        span class=word-groupspan class=originalfrescospanspan class=translationfreshspanspan
-        span class=word-groupspan class=originaldespanspan class=translationofspanspan
-        span class=word-groupspan class=originallaspanspan class=translationthespanspan
-        span class=word-groupspan class=originalnoche—.spanspan class=translationnight—.spanspan
-        span class=word-groupspan class=originalAl final,spanspan class=translationIn the end,spanspan
-        span class=word-groupspan class=originallospanspan class=translationthespanspan
-        span class=word-groupspan class=originalimportantespanspan class=translationimportant (thing)spanspan
-        span class=word-groupspan class=originalnospanspan class=translationnotspanspan
-        span class=word-groupspan class=originaleraspanspan class=translationwasspanspan
-        span class=word-groupspan class=originalelspanspan class=translationthespanspan
-        span class=word-groupspan class=originalrobotspanspan class=translationrobotspanspan
-        span class=word-groupspan class=originalnispanspan class=translationnorspanspan
-        span class=word-groupspan class=originallaspanspan class=translationthespanspan
-        span class=word-groupspan class=originalcriatura,spanspan class=translationcreature,spanspan
-        span class=word-groupspan class=originalsinospanspan class=translationbutspanspan
-        span class=word-groupspan class=originalcómospanspan class=translationhowspanspan
-        span class=word-groupspan class=originalse cuidabanspanspan class=translationthey took care ofspanspan
-        span class=word-groupspan class=originalel uno al otro.spanspan class=translationeach other.spanspan
-        span class=word-groupspan class=originalHacíanspanspan class=translationThey madespanspan
-        span class=word-groupspan class=originalunspanspan class=translationaspanspan
-        span class=word-groupspan class=originalbuenspanspan class=translationgoodspanspan
-        span class=word-groupspan class=originalequipo.spanspan class=translationteam.spanspan
-    p
+    <p class="interlinear">
+        <span class="word-group"><span class="original">—Qué</span><span class="translation">—What a</span></span>
+        <span class="word-group"><span class="original">buena</span><span class="translation">good</span></span>
+        <span class="word-group"><span class="original">historia</span><span class="translation">story</span></span>
+        <span class="word-group"><span class="original">—comentó</span><span class="translation">—he commented</span></span>
+        <span class="word-group"><span class="original">mientras</span><span class="translation">while</span></span>
+        <span class="word-group"><span class="original">salían</span><span class="translation">they went out</span></span>
+        <span class="word-group"><span class="original">al</span><span class="translation">into the</span></span>
+        <span class="word-group"><span class="original">aire</span><span class="translation">air</span></span>
+        <span class="word-group"><span class="original">fresco</span><span class="translation">fresh</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">noche—.</span><span class="translation">night—.</span></span>
+        <span class="word-group"><span class="original">Al final,</span><span class="translation">In the end,</span></span>
+        <span class="word-group"><span class="original">lo</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">importante</span><span class="translation">important (thing)</span></span>
+        <span class="word-group"><span class="original">no</span><span class="translation">not</span></span>
+        <span class="word-group"><span class="original">era</span><span class="translation">was</span></span>
+        <span class="word-group"><span class="original">el</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">robot</span><span class="translation">robot</span></span>
+        <span class="word-group"><span class="original">ni</span><span class="translation">nor</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">criatura,</span><span class="translation">creature,</span></span>
+        <span class="word-group"><span class="original">sino</span><span class="translation">but</span></span>
+        <span class="word-group"><span class="original">cómo</span><span class="translation">how</span></span>
+        <span class="word-group"><span class="original">se cuidaban</span><span class="translation">they took care of</span></span>
+        <span class="word-group"><span class="original">el uno al otro.</span><span class="translation">each other.</span></span>
+        <span class="word-group"><span class="original">Hacían</span><span class="translation">They made</span></span>
+        <span class="word-group"><span class="original">un</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">buen</span><span class="translation">good</span></span>
+        <span class="word-group"><span class="original">equipo.</span><span class="translation">team.</span></span>
+    </p>
     
-    p class=interlinear
-        span class=word-groupspan class=originalPedrospanspan class=translationPedrospanspan
-        span class=word-groupspan class=originalasintió.spanspan class=translationnodded.spanspan
-    p
+    <p class="interlinear">
+        <span class="word-group"><span class="original">Pedro</span><span class="translation">Pedro</span></span>
+        <span class="word-group"><span class="original">asintió.</span><span class="translation">nodded.</span></span>
+    </p>
 
-    p class=interlinear
-        span class=word-groupspan class=original—Desde luego.spanspan class=translation—Of course.spanspan
-        span class=word-groupspan class=originalUnaspanspan class=translationAspanspan
-        span class=word-groupspan class=originalbuenaspanspan class=translationgoodspanspan
-        span class=word-groupspan class=originallecciónspanspan class=translationlessonspanspan
-        span class=word-groupspan class=originalsobrespanspan class=translationaboutspanspan
-        span class=word-groupspan class=originalelspanspan class=translationthespanspan
-        span class=word-groupspan class=originaltrabajo en equipo.spanspan class=translationteamwork.spanspan
-        span class=word-groupspan class=originalYspanspan class=translationAndspanspan
-        span class=word-groupspan class=originalahoraspanspan class=translationnowspanspan
-        span class=word-groupspan class=originalsabemosspanspan class=translationwe knowspanspan
-        span class=word-groupspan class=originalquespanspan class=translationthatspanspan
-        span class=word-groupspan class=originallosspanspan class=translationthespanspan
-        span class=word-groupspan class=originalrobotsspanspan class=translationrobotsspanspan
-        span class=word-groupspan class=originalhacenspanspan class=translationmakespanspan
-        span class=word-groupspan class=originalbuenosspanspan class=translationgoodspanspan
-        span class=word-groupspan class=originalpanqueques.spanspan class=translationpancakes.spanspan
-        span class=word-groupspan class=originalUnspanspan class=translationAnspanspan
-        span class=word-groupspan class=originaldatospanspan class=translationfactspanspan
-        span class=word-groupspan class=originalimportante.spanspan class=translationimportant.spanspan
-    p
+    <p class="interlinear">
+        <span class="word-group"><span class="original">—Desde luego.</span><span class="translation">—Of course.</span></span>
+        <span class="word-group"><span class="original">Una</span><span class="translation">A</span></span>
+        <span class="word-group"><span class="original">buena</span><span class="translation">good</span></span>
+        <span class="word-group"><span class="original">lección</span><span class="translation">lesson</span></span>
+        <span class="word-group"><span class="original">sobre</span><span class="translation">about</span></span>
+        <span class="word-group"><span class="original">el</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">trabajo en equipo.</span><span class="translation">teamwork.</span></span>
+        <span class="word-group"><span class="original">Y</span><span class="translation">And</span></span>
+        <span class="word-group"><span class="original">ahora</span><span class="translation">now</span></span>
+        <span class="word-group"><span class="original">sabemos</span><span class="translation">we know</span></span>
+        <span class="word-group"><span class="original">que</span><span class="translation">that</span></span>
+        <span class="word-group"><span class="original">los</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">robots</span><span class="translation">robots</span></span>
+        <span class="word-group"><span class="original">hacen</span><span class="translation">make</span></span>
+        <span class="word-group"><span class="original">buenos</span><span class="translation">good</span></span>
+        <span class="word-group"><span class="original">panqueques.</span><span class="translation">pancakes.</span></span>
+        <span class="word-group"><span class="original">Un</span><span class="translation">An</span></span>
+        <span class="word-group"><span class="original">dato</span><span class="translation">fact</span></span>
+        <span class="word-group"><span class="original">importante.</span><span class="translation">important.</span></span>
+    </p>
 
-    p class=interlinear
-        span class=word-groupspan class=originalMateospanspan class=translationMateospanspan
-        span class=word-groupspan class=originalsoltóspanspan class=translationlet outspanspan
-        span class=word-groupspan class=originalunaspanspan class=translationaspanspan
-        span class=word-groupspan class=originalcarcajadaspanspan class=translationloud laughspanspan
-        span class=word-groupspan class=originalalegrespanspan class=translationhappyspanspan
-        span class=word-groupspan class=originalyspanspan class=translationandspanspan
-        span class=word-groupspan class=originalcálida.spanspan class=translationwarm.spanspan
-        span class=word-groupspan class=originalSe cogióspanspan class=translationHe took holdspanspan
-        span class=word-groupspan class=originaldelspanspan class=translationof thespanspan
-        span class=word-groupspan class=originalbrazospanspan class=translationarmspanspan
-        span class=word-groupspan class=originaldespanspan class=translationofspanspan
-        span class=word-groupspan class=originalPedrospanspan class=translationPedrospanspan
-        span class=word-groupspan class=originalyspanspan class=translationandspanspan
-        span class=word-groupspan class=originalcaminaronspanspan class=translationthey walkedspanspan
-        span class=word-groupspan class=originalaspanspan class=translationtospanspan
-        span class=word-groupspan class=originalcasaspanspan class=translationhomespanspan
-        span class=word-groupspan class=originaljuntos,spanspan class=translationtogether,spanspan
-        span class=word-groupspan class=originalbajospanspan class=translationunderspanspan
-        span class=word-groupspan class=originallasspanspan class=translationthespanspan
-        span class=word-groupspan class=originallucesspanspan class=translationlightsspanspan
-        span class=word-groupspan class=originaldespanspan class=translationofspanspan
-        span class=word-groupspan class=originallaspanspan class=translationthespanspan
-        span class=word-groupspan class=originalciudad.spanspan class=translationcity.spanspan
-    p
+    <p class="interlinear">
+        <span class="word-group"><span class="original">Mateo</span><span class="translation">Mateo</span></span>
+        <span class="word-group"><span class="original">soltó</span><span class="translation">let out</span></span>
+        <span class="word-group"><span class="original">una</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">carcajada</span><span class="translation">loud laugh</span></span>
+        <span class="word-group"><span class="original">alegre</span><span class="translation">happy</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">cálida.</span><span class="translation">warm.</span></span>
+        <span class="word-group"><span class="original">Se cogió</span><span class="translation">He took hold</span></span>
+        <span class="word-group"><span class="original">del</span><span class="translation">of the</span></span>
+        <span class="word-group"><span class="original">brazo</span><span class="translation">arm</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">Pedro</span><span class="translation">Pedro</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">caminaron</span><span class="translation">they walked</span></span>
+        <span class="word-group"><span class="original">a</span><span class="translation">to</span></span>
+        <span class="word-group"><span class="original">casa</span><span class="translation">home</span></span>
+        <span class="word-group"><span class="original">juntos,</span><span class="translation">together,</span></span>
+        <span class="word-group"><span class="original">bajo</span><span class="translation">under</span></span>
+        <span class="word-group"><span class="original">las</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">luces</span><span class="translation">lights</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">ciudad.</span><span class="translation">city.</span></span>
+    </p>
 
-body
-html
+</body>
+</html>
