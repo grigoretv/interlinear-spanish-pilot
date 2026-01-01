@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interlinear: Una Confusión en la Cafetería</title>
+
+    <!-- Google Font Import for EB Garamond -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'EB Garamond', serif; /* Use the imported Garamond font */
+            line-height: 1.5;
+            max-width: 800px;
+            margin: auto;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            /* The bottom border has been replaced by the hr element */
+            padding: 0 2em 0.5em;
+            font-weight: 700; /* Use the bold weight of the font */
+            margin-bottom: 1em; /* Adjusted margin */
+        }
+        
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ccc;
+            margin: 0 2em 2em; /* Top, Horizontal, Bottom margin */
+        }
+
+        /* This is the main container for a paragraph of interlinear text. */
+        .interlinear {
+            margin-bottom: 2em; /* Increased space between paragraphs */
+            text-align: justify; 
+            padding: 0 2em;
+        }
+
+        /* This is the container for EACH individual word and its translation. */
+        .word-group {
+            display: inline-block;
+            vertical-align: bottom; /* Aligns the bottom of the groups */
+            margin: 0 0.2em 1.5em;  /* right-margin, bottom-margin */
+            text-align: center;
+            padding: 0.2em;
+        }
+
+        /* Indent only the first word-group of a paragraph */
+        .interlinear .word-group:first-child {
+            margin-left: 2em;
+        }
+
+        /* The original source language text (Spanish) */
+        .original {
+            display: block;  /* Ensures it takes its own line inside the group */
+            font-size: 1.3em;
+            font-weight: 400; /* Set to normal as requested */
+            color: #000;
+        }
+        
+        /* Specific font size for the main text */
+        .interlinear .original {
+            font-size: 1.35em;
+        }
+        
+        /* Specific font size for the title text */
+        h1 .original {
+            font-size: 1.5em;
+        }
+
+
+        /* The translated gloss (English) */
+        .translation {
+            display: block;  /* Ensures it takes its own line inside the group */
+            font-size: 0.9em;
+            color: #666; /* Grey color to make it less prominent */
+            font-style: italic;
+            font-weight: 400; /* Set to normal to match the original text's weight */
+        }
+
+        /* --- MOBILE RESPONSIVE STYLES --- */
+        @media (max-width: 768px) {
+            h1 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 0 1em 0.5em;
+            }
+            
+            /* Reduce title font size on mobile */
+            h1 .original {
+                font-size: 1.15em;
+            }
+            
+            hr {
+                margin: 0 1em 2em;
+            }
+
+            .interlinear {
+                padding: 0 1em;
+            }
+
+            h1 .word-group {
+                margin-bottom: 1em;
+            }
+            
+            .interlinear .word-group:first-child {
+                margin-left: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>
+        <span class="word-group"><span class="original">Una</span><span class="translation">A</span></span>
+        <span class="word-group"><span class="original">Confusión</span><span class="translation">Confusion</span></span>
+        <span class="word-group"><span class="original">en</span><span class="translation">in</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">Cafetería</span><span class="translation">Cafeteria</span></span>
+    </h1>
+    
+    <hr>
+
+    <p class="interlinear">
+        <span class="word-group"><span class="original">Es</span><span class="translation">It is</span></span>
+        <span class="word-group"><span class="original">martes</span><span class="translation">Tuesday</span></span>
+        <span class="word-group"><span class="original">por</span><span class="translation">in</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">mañana</span><span class="translation">morning</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">hace</span><span class="translation">it is</span></span>
+        <span class="word-group"><span class="original">un</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">poco</span><span class="translation">little</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">frío.</span><span class="translation">cold.</span></span>
+        <span class="word-group"><span class="original">Javier</span><span class="translation">Javier</span></span>
+        <span class="word-group"><span class="original">camina</span><span class="translation">walks</span></span>
+        <span class="word-group"><span class="original">por</span><span class="translation">through</span></span>
+        <span class="word-group"><span class="original">el</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">centro</span><span class="translation">center</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">ciudad.</span><span class="translation">city.</span></span>
+        <span class="word-group"><span class="original">Él</span><span class="translation">He</span></span>
+        <span class="word-group"><span class="original">tiene</span><span class="translation">has</span></span>
+        <span class="word-group"><span class="original">una</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">reunión</span><span class="translation">meeting</span></span>
+        <span class="word-group"><span class="original">importante</span><span class="translation">important</span></span>
+        <span class="word-group"><span class="original">en</span><span class="translation">in</span></span>
+        <span class="word-group"><span class="original">una</span><span class="translation">an</span></span>
+        <span class="word-group"><span class="original">hora,</span><span class="translation">hour,</span></span>
+        <span class="word-group"><span class="original">pero</span><span class="translation">but</span></span>
+        <span class="word-group"><span class="original">primero</span><span class="translation">first</span></span>
+        <span class="word-group"><span class="original">necesita</span><span class="translation">(he) needs</span></span>
+        <span class="word-group"><span class="original">despertar</span><span class="translation">to wake up</span></span>
+        <span class="word-group"><span class="original">un</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">poco</span><span class="translation">little</span></span>
+        <span class="word-group"><span class="original">más.</span><span class="translation">more.</span></span>
+        <span class="word-group"><span class="original">Javier</span><span class="translation">Javier</span></span>
+        <span class="word-group"><span class="original">decide</span><span class="translation">decides</span></span>
+        <span class="word-group"><span class="original">entrar</span><span class="translation">to enter</span></span>
+        <span class="word-group"><span class="original">en</span><span class="translation">into</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">cafetería</span><span class="translation">cafeteria</span></span>
+        <span class="word-group"><span class="original">"El Buen Gusto".</span><span class="translation">"El Buen Gusto".</span></span>
+    </p>
+
+    <p class="interlinear">
+        <span class="word-group"><span class="original">El</span><span class="translation">The</span></span>
+        <span class="word-group"><span class="original">lugar</span><span class="translation">place</span></span>
+        <span class="word-group"><span class="original">es</span><span class="translation">is</span></span>
+        <span class="word-group"><span class="original">pequeño</span><span class="translation">small</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">acogedor.</span><span class="translation">cozy.</span></span>
+        <span class="word-group"><span class="original">Huele</span><span class="translation">It smells</span></span>
+        <span class="word-group"><span class="original">a</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">pan</span><span class="translation">bread</span></span>
+        <span class="word-group"><span class="original">tostado</span><span class="translation">toasted</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">a</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">café</span><span class="translation">coffee</span></span>
+        <span class="word-group"><span class="original">recién</span><span class="translation">freshly</span></span>
+        <span class="word-group"><span class="original">hecho.</span><span class="translation">made.</span></span>
+        <span class="word-group"><span class="original">Javier</span><span class="translation">Javier</span></span>
+        <span class="word-group"><span class="original">busca</span><span class="translation">looks for</span></span>
+        <span class="word-group"><span class="original">una</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">mesa</span><span class="translation">table</span></span>
+        <span class="word-group"><span class="original">libre</span><span class="translation">free</span></span>
+        <span class="word-group"><span class="original">cerca de</span><span class="translation">near</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">ventana</span><span class="translation">window</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">se sienta.</span><span class="translation">sits down.</span></span>
+        <span class="word-group"><span class="original">Pocos</span><span class="translation">Few</span></span>
+        <span class="word-group"><span class="original">minutos</span><span class="translation">minutes</span></span>
+        <span class="word-group"><span class="original">después,</span><span class="translation">later,</span></span>
+        <span class="word-group"><span class="original">un</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">camarero</span><span class="translation">waiter</span></span>
+        <span class="word-group"><span class="original">joven</span><span class="translation">young</span></span>
+        <span class="word-group"><span class="original">se acerca</span><span class="translation">approaches</span></span>
+        <span class="word-group"><span class="original">a</span><span class="translation">to</span></span>
+        <span class="word-group"><span class="original">su</span><span class="translation">his</span></span>
+        <span class="word-group"><span class="original">mesa</span><span class="translation">table</span></span>
+        <span class="word-group"><span class="original">con</span><span class="translation">with</span></span>
+        <span class="word-group"><span class="original">una</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">libreta</span><span class="translation">notebook</span></span>
+        <span class="word-group"><span class="original">en</span><span class="translation">in</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">mano.</span><span class="translation">hand.</span></span>
+    </p>
+
+    <p class="interlinear">
+        <span class="word-group"><span class="original">—Buenos días</span><span class="translation">—Good morning</span></span>
+        <span class="word-group"><span class="original">—dice</span><span class="translation">—says</span></span>
+        <span class="word-group"><span class="original">el</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">camarero</span><span class="translation">waiter</span></span>
+        <span class="word-group"><span class="original">con</span><span class="translation">with</span></span>
+        <span class="word-group"><span class="original">una</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">sonrisa—.</span><span class="translation">smile—.</span></span>
+        <span class="word-group"><span class="original">¿Qué le pongo?</span><span class="translation">What can I get you?</span></span>
+        <span class="word-group"><span class="original">—Buenos días</span><span class="translation">—Good morning</span></span>
+        <span class="word-group"><span class="original">—responde</span><span class="translation">—responds</span></span>
+        <span class="word-group"><span class="original">Javier—.</span><span class="translation">Javier—.</span></span>
+        <span class="word-group"><span class="original">Para</span><span class="translation">For</span></span>
+        <span class="word-group"><span class="original">mí,</span><span class="translation">me,</span></span>
+        <span class="word-group"><span class="original">un</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">café</span><span class="translation">coffee</span></span>
+        <span class="word-group"><span class="original">con</span><span class="translation">with</span></span>
+        <span class="word-group"><span class="original">leche</span><span class="translation">milk</span></span>
+        <span class="word-group"><span class="original">grande</span><span class="translation">large</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">muy</span><span class="translation">very</span></span>
+        <span class="word-group"><span class="original">caliente,</span><span class="translation">hot,</span></span>
+        <span class="word-group"><span class="original">por favor.</span><span class="translation">please.</span></span>
+        <span class="word-group"><span class="original">Y</span><span class="translation">And</span></span>
+        <span class="word-group"><span class="original">también</span><span class="translation">also</span></span>
+        <span class="word-group"><span class="original">un</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">vaso</span><span class="translation">glass</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">agua.</span><span class="translation">water.</span></span>
+    </p>
+
+    <p class="interlinear">
+        <span class="word-group"><span class="original">—Perfecto.</span><span class="translation">—Perfect.</span></span>
+        <span class="word-group"><span class="original">¿Quiere</span><span class="translation">Do you want</span></span>
+        <span class="word-group"><span class="original">algo</span><span class="translation">something</span></span>
+        <span class="word-group"><span class="original">de comer?</span><span class="translation">to eat?</span></span>
+        <span class="word-group"><span class="original">Tenemos</span><span class="translation">We have</span></span>
+        <span class="word-group"><span class="original">cruasanes</span><span class="translation">croissants</span></span>
+        <span class="word-group"><span class="original">recién</span><span class="translation">freshly</span></span>
+        <span class="word-group"><span class="original">horneados.</span><span class="translation">baked.</span></span>
+        <span class="word-group"><span class="original">—No,</span><span class="translation">—No,</span></span>
+        <span class="word-group"><span class="original">gracias.</span><span class="translation">thanks.</span></span>
+        <span class="word-group"><span class="original">Solo</span><span class="translation">Only</span></span>
+        <span class="word-group"><span class="original">el</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">café.</span><span class="translation">coffee.</span></span>
+        <span class="word-group"><span class="original">Tengo</span><span class="translation">I have</span></span>
+        <span class="word-group"><span class="original">un</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">poco</span><span class="translation">little</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">prisa.</span><span class="translation">hurry.</span></span>
+        <span class="word-group"><span class="original">—Muy</span><span class="translation">—Very</span></span>
+        <span class="word-group"><span class="original">bien,</span><span class="translation">well,</span></span>
+        <span class="word-group"><span class="original">enseguida</span><span class="translation">right away</span></span>
+        <span class="word-group"><span class="original">se lo traigo.</span><span class="translation">I (will) bring it to you.</span></span>
+    </p>
+
+    <p class="interlinear">
+        <span class="word-group"><span class="original">Javier</span><span class="translation">Javier</span></span>
+        <span class="word-group"><span class="original">saca</span><span class="translation">takes out</span></span>
+        <span class="word-group"><span class="original">su</span><span class="translation">his</span></span>
+        <span class="word-group"><span class="original">teléfono</span><span class="translation">phone</span></span>
+        <span class="word-group"><span class="original">móvil</span><span class="translation">mobile</span></span>
+        <span class="word-group"><span class="original">para</span><span class="translation">to</span></span>
+        <span class="word-group"><span class="original">leer</span><span class="translation">read</span></span>
+        <span class="word-group"><span class="original">las</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">noticias</span><span class="translation">news</span></span>
+        <span class="word-group"><span class="original">mientras</span><span class="translation">while</span></span>
+        <span class="word-group"><span class="original">espera.</span><span class="translation">(he) waits.</span></span>
+        <span class="word-group"><span class="original">El</span><span class="translation">The</span></span>
+        <span class="word-group"><span class="original">ambiente</span><span class="translation">atmosphere</span></span>
+        <span class="word-group"><span class="original">en</span><span class="translation">in</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">cafetería</span><span class="translation">cafeteria</span></span>
+        <span class="word-group"><span class="original">es</span><span class="translation">is</span></span>
+        <span class="word-group"><span class="original">relajante.</span><span class="translation">relaxing.</span></span>
+        <span class="word-group"><span class="original">Cinco</span><span class="translation">Five</span></span>
+        <span class="word-group"><span class="original">minutos</span><span class="translation">minutes</span></span>
+        <span class="word-group"><span class="original">después,</span><span class="translation">later,</span></span>
+        <span class="word-group"><span class="original">el</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">camarero</span><span class="translation">waiter</span></span>
+        <span class="word-group"><span class="original">regresa</span><span class="translation">returns</span></span>
+        <span class="word-group"><span class="original">a</span><span class="translation">to</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">mesa.</span><span class="translation">table.</span></span>
+        <span class="word-group"><span class="original">Él</span><span class="translation">He</span></span>
+        <span class="word-group"><span class="original">pone</span><span class="translation">puts</span></span>
+        <span class="word-group"><span class="original">una</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">taza</span><span class="translation">cup</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">un</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">plato</span><span class="translation">plate</span></span>
+        <span class="word-group"><span class="original">sobre</span><span class="translation">on</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">mesa.</span><span class="translation">table.</span></span>
+    </p>
+
+    <p class="interlinear">
+        <span class="word-group"><span class="original">—Aquí tiene.</span><span class="translation">—Here you go.</span></span>
+        <span class="word-group"><span class="original">Un</span><span class="translation">A</span></span>
+        <span class="word-group"><span class="original">té</span><span class="translation">tea</span></span>
+        <span class="word-group"><span class="original">verde</span><span class="translation">green</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">una</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">tostada</span><span class="translation">toast</span></span>
+        <span class="word-group"><span class="original">con</span><span class="translation">with</span></span>
+        <span class="word-group"><span class="original">tomate</span><span class="translation">tomato</span></span>
+        <span class="word-group"><span class="original">—dice</span><span class="translation">—says</span></span>
+        <span class="word-group"><span class="original">el</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">camarero.</span><span class="translation">waiter.</span></span>
+        <span class="word-group"><span class="original">Javier</span><span class="translation">Javier</span></span>
+        <span class="word-group"><span class="original">mira</span><span class="translation">looks at</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">mesa</span><span class="translation">table</span></span>
+        <span class="word-group"><span class="original">confundido.</span><span class="translation">confused.</span></span>
+        <span class="word-group"><span class="original">Él</span><span class="translation">He</span></span>
+        <span class="word-group"><span class="original">no</span><span class="translation">does not</span></span>
+        <span class="word-group"><span class="original">bebe</span><span class="translation">drink</span></span>
+        <span class="word-group"><span class="original">té.</span><span class="translation">tea.</span></span>
+        <span class="word-group"><span class="original">—Disculpe</span><span class="translation">—Excuse me</span></span>
+        <span class="word-group"><span class="original">—dice</span><span class="translation">—says</span></span>
+        <span class="word-group"><span class="original">Javier</span><span class="translation">Javier</span></span>
+        <span class="word-group"><span class="original">amablemente—,</span><span class="translation">kindly—,</span></span>
+        <span class="word-group"><span class="original">creo</span><span class="translation">I believe</span></span>
+        <span class="word-group"><span class="original">que</span><span class="translation">that</span></span>
+        <span class="word-group"><span class="original">hay</span><span class="translation">there is</span></span>
+        <span class="word-group"><span class="original">un</span><span class="translation">an</span></span>
+        <span class="word-group"><span class="original">error.</span><span class="translation">error.</span></span>
+        <span class="word-group"><span class="original">Yo</span><span class="translation">I</span></span>
+        <span class="word-group"><span class="original">no</span><span class="translation">did not</span></span>
+        <span class="word-group"><span class="original">pedí</span><span class="translation">order</span></span>
+        <span class="word-group"><span class="original">esto.</span><span class="translation">this.</span></span>
+        <span class="word-group"><span class="original">El</span><span class="translation">The</span></span>
+        <span class="word-group"><span class="original">camarero</span><span class="translation">waiter</span></span>
+        <span class="word-group"><span class="original">se detiene</span><span class="translation">stops</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">mira</span><span class="translation">looks at</span></span>
+        <span class="word-group"><span class="original">su</span><span class="translation">his</span></span>
+        <span class="word-group"><span class="original">libreta.</span><span class="translation">notebook.</span></span>
+        <span class="word-group"><span class="original">—¿No?</span><span class="translation">—No?</span></span>
+        <span class="word-group"><span class="original">¿Qué</span><span class="translation">What</span></span>
+        <span class="word-group"><span class="original">pidió</span><span class="translation">ordered</span></span>
+        <span class="word-group"><span class="original">usted?</span><span class="translation">you?</span></span>
+        <span class="word-group"><span class="original">—Yo</span><span class="translation">—I</span></span>
+        <span class="word-group"><span class="original">pedí</span><span class="translation">ordered</span></span>
+        <span class="word-group"><span class="original">un</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">café</span><span class="translation">coffee</span></span>
+        <span class="word-group"><span class="original">con</span><span class="translation">with</span></span>
+        <span class="word-group"><span class="original">leche</span><span class="translation">milk</span></span>
+        <span class="word-group"><span class="original">grande</span><span class="translation">large</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">un</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">vaso</span><span class="translation">glass</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">agua.</span><span class="translation">water.</span></span>
+        <span class="word-group"><span class="original">Nada</span><span class="translation">Nothing</span></span>
+        <span class="word-group"><span class="original">de comer.</span><span class="translation">to eat.</span></span>
+    </p>
+
+    <p class="interlinear">
+        <span class="word-group"><span class="original">El</span><span class="translation">The</span></span>
+        <span class="word-group"><span class="original">camarero</span><span class="translation">waiter</span></span>
+        <span class="word-group"><span class="original">se pone</span><span class="translation">gets</span></span>
+        <span class="word-group"><span class="original">un</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">poco</span><span class="translation">little</span></span>
+        <span class="word-group"><span class="original">rojo.</span><span class="translation">red.</span></span>
+        <span class="word-group"><span class="original">Parece</span><span class="translation">He seems</span></span>
+        <span class="word-group"><span class="original">avergonzado.</span><span class="translation">embarrassed.</span></span>
+        <span class="word-group"><span class="original">—¡Ay,</span><span class="translation">—Oh,</span></span>
+        <span class="word-group"><span class="original">lo siento</span><span class="translation">I am sorry</span></span>
+        <span class="word-group"><span class="original">muchísimo!</span><span class="translation">very much!</span></span>
+        <span class="word-group"><span class="original">Me he confundido</span><span class="translation">I got confused</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">about (the)</span></span>
+        <span class="word-group"><span class="original">mesa.</span><span class="translation">table.</span></span>
+        <span class="word-group"><span class="original">Esa</span><span class="translation">That</span></span>
+        <span class="word-group"><span class="original">es</span><span class="translation">is</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">orden</span><span class="translation">order</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">of</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">señora</span><span class="translation">lady</span></span>
+        <span class="word-group"><span class="original">de al lado.</span><span class="translation">at the next table.</span></span>
+        <span class="word-group"><span class="original">Ahora mismo</span><span class="translation">Right now</span></span>
+        <span class="word-group"><span class="original">se lo cambio.</span><span class="translation">I (will) change it for you.</span></span>
+        <span class="word-group"><span class="original">—No se preocupe,</span><span class="translation">—Do not worry,</span></span>
+        <span class="word-group"><span class="original">no pasa nada</span><span class="translation">it is no problem</span></span>
+        <span class="word-group"><span class="original">—responde</span><span class="translation">—responds</span></span>
+        <span class="word-group"><span class="original">Javier</span><span class="translation">Javier</span></span>
+        <span class="word-group"><span class="original">tranquilo.</span><span class="translation">calmly.</span></span>
+    </p>
+
+    <p class="interlinear">
+        <span class="word-group"><span class="original">El</span><span class="translation">The</span></span>
+        <span class="word-group"><span class="original">camarero</span><span class="translation">waiter</span></span>
+        <span class="word-group"><span class="original">retira</span><span class="translation">removes</span></span>
+        <span class="word-group"><span class="original">el</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">té</span><span class="translation">tea</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">tostada</span><span class="translation">toast</span></span>
+        <span class="word-group"><span class="original">rápidamente.</span><span class="translation">quickly.</span></span>
+        <span class="word-group"><span class="original">Un</span><span class="translation">A</span></span>
+        <span class="word-group"><span class="original">minuto</span><span class="translation">minute</span></span>
+        <span class="word-group"><span class="original">después,</span><span class="translation">later,</span></span>
+        <span class="word-group"><span class="original">vuelve</span><span class="translation">returns</span></span>
+        <span class="word-group"><span class="original">con</span><span class="translation">with</span></span>
+        <span class="word-group"><span class="original">un</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">café</span><span class="translation">coffee</span></span>
+        <span class="word-group"><span class="original">con</span><span class="translation">with</span></span>
+        <span class="word-group"><span class="original">leche</span><span class="translation">milk</span></span>
+        <span class="word-group"><span class="original">humeante</span><span class="translation">steaming</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">el</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">agua.</span><span class="translation">water.</span></span>
+        <span class="word-group"><span class="original">—Aquí tiene</span><span class="translation">—Here is</span></span>
+        <span class="word-group"><span class="original">su</span><span class="translation">your</span></span>
+        <span class="word-group"><span class="original">café,</span><span class="translation">coffee,</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">disculpe</span><span class="translation">excuse</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">demora.</span><span class="translation">delay.</span></span>
+        <span class="word-group"><span class="original">Hoy</span><span class="translation">Today</span></span>
+        <span class="word-group"><span class="original">estamos</span><span class="translation">we are</span></span>
+        <span class="word-group"><span class="original">muy</span><span class="translation">very</span></span>
+        <span class="word-group"><span class="original">ocupados.</span><span class="translation">busy.</span></span>
+        <span class="word-group"><span class="original">—Muchas</span><span class="translation">—Many</span></span>
+        <span class="word-group"><span class="original">gracias</span><span class="translation">thanks</span></span>
+        <span class="word-group"><span class="original">—dice</span><span class="translation">—says</span></span>
+        <span class="word-group"><span class="original">Javier.</span><span class="translation">Javier.</span></span>
+    </p>
+
+    <p class="interlinear">
+        <span class="word-group"><span class="original">Javier</span><span class="translation">Javier</span></span>
+        <span class="word-group"><span class="original">toma</span><span class="translation">drinks</span></span>
+        <span class="word-group"><span class="original">su</span><span class="translation">his</span></span>
+        <span class="word-group"><span class="original">café</span><span class="translation">coffee</span></span>
+        <span class="word-group"><span class="original">tranquilamente.</span><span class="translation">calmly.</span></span>
+        <span class="word-group"><span class="original">Está</span><span class="translation">It is</span></span>
+        <span class="word-group"><span class="original">delicioso</span><span class="translation">delicious</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">perfecto</span><span class="translation">perfect</span></span>
+        <span class="word-group"><span class="original">para</span><span class="translation">for</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">mañana</span><span class="translation">morning</span></span>
+        <span class="word-group"><span class="original">fría.</span><span class="translation">cold.</span></span>
+        <span class="word-group"><span class="original">Cuando</span><span class="translation">When</span></span>
+        <span class="word-group"><span class="original">termina,</span><span class="translation">(he) finishes,</span></span>
+        <span class="word-group"><span class="original">hace</span><span class="translation">makes</span></span>
+        <span class="word-group"><span class="original">un</span><span class="translation">a</span></span>
+        <span class="word-group"><span class="original">gesto</span><span class="translation">gesture</span></span>
+        <span class="word-group"><span class="original">al</span><span class="translation">to the</span></span>
+        <span class="word-group"><span class="original">camarero</span><span class="translation">waiter</span></span>
+        <span class="word-group"><span class="original">para</span><span class="translation">to</span></span>
+        <span class="word-group"><span class="original">pagar.</span><span class="translation">pay.</span></span>
+        <span class="word-group"><span class="original">—La</span><span class="translation">—The</span></span>
+        <span class="word-group"><span class="original">cuenta,</span><span class="translation">bill,</span></span>
+        <span class="word-group"><span class="original">por favor.</span><span class="translation">please.</span></span>
+        <span class="word-group"><span class="original">—Enseguida.</span><span class="translation">—Right away.</span></span>
+        <span class="word-group"><span class="original">Son</span><span class="translation">It is</span></span>
+        <span class="word-group"><span class="original">dos</span><span class="translation">two</span></span>
+        <span class="word-group"><span class="original">euros</span><span class="translation">euros</span></span>
+        <span class="word-group"><span class="original">con</span><span class="translation">with</span></span>
+        <span class="word-group"><span class="original">cincuenta.</span><span class="translation">fifty.</span></span>
+        <span class="word-group"><span class="original">Javier</span><span class="translation">Javier</span></span>
+        <span class="word-group"><span class="original">deja</span><span class="translation">leaves</span></span>
+        <span class="word-group"><span class="original">tres</span><span class="translation">three</span></span>
+        <span class="word-group"><span class="original">euros</span><span class="translation">euros</span></span>
+        <span class="word-group"><span class="original">en</span><span class="translation">on</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">mesa.</span><span class="translation">table.</span></span>
+        <span class="word-group"><span class="original">—Quédese con</span><span class="translation">—Keep</span></span>
+        <span class="word-group"><span class="original">el</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">cambio.</span><span class="translation">change.</span></span>
+        <span class="word-group"><span class="original">Gracias</span><span class="translation">Thanks</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">buen</span><span class="translation">good</span></span>
+        <span class="word-group"><span class="original">día.</span><span class="translation">day.</span></span>
+        <span class="word-group"><span class="original">—¡Igualmente!</span><span class="translation">—Likewise!</span></span>
+        <span class="word-group"><span class="original">Hasta luego.</span><span class="translation">See you later.</span></span>
+    </p>
+    
+    <p class="interlinear">
+        <span class="word-group"><span class="original">Javier</span><span class="translation">Javier</span></span>
+        <span class="word-group"><span class="original">sale</span><span class="translation">leaves</span></span>
+        <span class="word-group"><span class="original">de</span><span class="translation">from</span></span>
+        <span class="word-group"><span class="original">la</span><span class="translation">the</span></span>
+        <span class="word-group"><span class="original">cafetería</span><span class="translation">cafeteria</span></span>
+        <span class="word-group"><span class="original">contento</span><span class="translation">content</span></span>
+        <span class="word-group"><span class="original">y</span><span class="translation">and</span></span>
+        <span class="word-group"><span class="original">listo</span><span class="translation">ready</span></span>
+        <span class="word-group"><span class="original">para</span><span class="translation">for</span></span>
+        <span class="word-group"><span class="original">su</span><span class="translation">his</span></span>
+        <span class="word-group"><span class="original">reunión.</span><span class="translation">meeting.</span></span>
+    </p>
+
+</body>
+</html>
